@@ -2,8 +2,8 @@ let body = document.getElementsByTagName('body')[0],
 h3 = document.createElement ("h3")
 body.append (h3)
 h3.append ('Flip The Coin');
-    main = document.createElement('main');
-body.append(main);
+//     main = document.createElement('main');
+// body.append(main);
 
 
 let coin = {
@@ -20,18 +20,18 @@ let coin = {
 
     toString: function () {
         let newString = document.createElement('string');
-        newString.setAttribute('class', 'newString')
-        main.append(newString);
+        newString.setAttribute('div', 'newString')
+        body.append(newString);
         /* 2. Return the string , depending on whether
            "this.state" is 0 or 1. */
 
 
-        if (thisState == 0) {
-            document.write("Tails", "\xa0\xa0 ");
-            
+        if (this.state == 0) {
+            document.body.append("Tails", "\xa0\xa0 ");
+
         }
-        else if (thisState == 1) {
-            document.write("Heads", "\xa0\xa0 ");
+        else if (this.state == 1) {
+            document.body.append("Heads", "\xa0\xa0 ");
 
         }
     },
@@ -39,16 +39,16 @@ let coin = {
         let image = document.createElement('img');
         image.setAttribute('class', 'image');
         image.setAttribute('alt', 'image');
-        main.append(image);
-        image.setAttribute('width', '127px');
+        body.append(image);
+        image.setAttribute('width', '120px');
         image.setAttribute("border", "4px solid green");
-       
-        if (thisState == 0) {
+
+        if (this.state == 0) {
 
             image.setAttribute("src", "Tails.jpg", "   ");
 
         }
-        else if (thisState == 1) {
+        else if (this.state == 1) {
 
             image.setAttribute("src", "Heads.jpg", "   ");
 
@@ -60,16 +60,23 @@ let coin = {
 };
 
 // String For Loop
-for (let stringIndex = 0; stringIndex < 20; stringIndex++) {
-    coin.flip(); coin.toString()
 
+    for (let stringIndex = 0; stringIndex < 20; stringIndex++) {
+        coin.flip(); coin.toString()
+    
+    
+    
 }
+
 
 // image For loop
-for (let imageIndex = 0; imageIndex < 20; imageIndex++) {
-    coin.toHTML(); coin.flip();
 
+    for (let imageIndex = 0; imageIndex < 20; imageIndex++) {
+ coin.toHTML(); coin.flip();
+    
+    
 }
+
 
 
 

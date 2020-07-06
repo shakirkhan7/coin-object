@@ -1,6 +1,9 @@
 
 .image {
-    bottom: 10;
+    position: relative;
+    bottom:-145px;
+    width: 140px;
+
 }
 body h3{
   text-align: center;
@@ -11,9 +14,10 @@ body h3{
 
 
 body{
+    position: relative;
     max-width: 840ox;
-    font-size: 25px;
-    bottom: auto;
+    font-size: 22px;
+    bottom: -10px;
     color: silver;
     background-image: url("bg.jpg");
     
@@ -26,12 +30,15 @@ body{
     font-size: 25px;
     box-shadow: 10px;
     border-radius: 10%;
-    bottom: -15px;
+    bottom: -145px;
     background-color: violet;
     
     
 
 }
 .newString{
-    font-size: 100pt;
+    position: relative;
+    font-size: 150pt;
+    top: 10px;
+
 }
